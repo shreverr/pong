@@ -18,7 +18,7 @@ async function fetchTarget() {
 }
 
 fetchTarget()
-setInterval(fetchTarget, 5 * 60 * 1000)
+setInterval(fetchTarget, 30 * 1000)
 
 app.get('/', (c) => {
   return c.text('Hello Hono!')
