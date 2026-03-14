@@ -10,6 +10,8 @@ async function fetchTarget() {
   try {
     const res = await fetch(url)
     lastFetch = { ts: new Date().toISOString(), status: res.status, ok: res.ok }
+    console.log(await res.json());
+    
   } catch (err) {
     lastFetch = { ts: new Date().toISOString(), error: String(err) }
   }
